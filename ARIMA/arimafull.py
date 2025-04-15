@@ -31,6 +31,8 @@ model_fit = model.fit()
 
 forecast = model_fit.forecast(steps=30)
 
+print(model_fit.summary())
+
 plt.figure(figsize=(12, 6))
 plt.plot(df, label='Original')
 plt.plot(forecast.index, forecast, label='Forecast (Next 30 Days)', color='red')
